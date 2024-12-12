@@ -17,7 +17,7 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors  */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
@@ -27,7 +27,7 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors  */
 :root {
   --nav-color: #3a3939;  /* The default color of the main navmenu links */
   --nav-hover-color: #e84545; /* Applied to main navmenu links when they are hovered over or active */
@@ -37,8 +37,7 @@
   --nav-dropdown-hover-color: #e84545; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Color Presets - These classes override global colors when applied to any section or element */
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
@@ -66,29 +65,26 @@ body {
   font-family: var(--default-font);
 }
 
+/*  Estilização dos Links */
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
 }
 
+/* Efeito quando passa a mão sobre o objeto */
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Estilização de titulos */
+h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages */
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -129,6 +125,7 @@ h6 {
   animation: php-email-form-loading 1s linear infinite;
 }
 
+/* Circulo de loading */
 @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
@@ -148,19 +145,6 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-}
-
-.select-light-gray {
-  background-color: #f8f9fa; /* Cor de fundo clara */
-  color: #555555; /* Cor do texto */
-  border: 1px solid #ced4da; /* Cor da borda */
-  border-radius: 4px; /* Bordas arredondadas */
-  padding: 0.75rem; /* Espaçamento interno */
-}
-
-.select-light-gray:focus {
-  outline: none; /* Remove o contorno padrão */
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Adiciona sombra ao focar */
 }
 
 .header .logo {
@@ -223,7 +207,25 @@ h6 {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Index Page Header
+
+/*------------------------------
+Formularios e inputs
+------------------------------*/
+/* Fundo das seleções da página principal (categoria proposito etc) */
+.select-light-gray {
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  color: #555555; /* Cor do texto */
+  border: 1px solid #ced4da; /* Cor da borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  padding: 0.75rem; /* Espaçamento interno */
+}
+.select-light-gray:focus {
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Adiciona sombra ao focar */
+}
+
+/* ------------------------------
+Index Page Header
 ------------------------------*/
 .index-page .header {
   --background-color: rgba(255, 255, 255, 0);
@@ -351,6 +353,8 @@ h6 {
   }
 }
 
+
+
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -476,6 +480,111 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+}
+
+/*--------------------------------------------------------------
+# Botões e Formulários
+--------------------------------------------------------------*/
+/* Estilo do botão Login */
+.btn-outline-secondary {
+  color: #fff;
+  border-color: #31827c;
+  background-color: #31827c;
+  height: 50px; /* Altura fixa */
+  line-height: 48px; /* Centraliza o texto verticalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-right: 10px; /* Margem à direita para separar do botão "New Register" */
+}
+
+/* Estilo do botão Login quando passar o mouse */
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #27635f;
+  border-color: #343a40;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #343a40; /* Cor do fundo */
+  border: 1px solid #31827c; /* Cor da borda */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Campos de input */
+.form-control {
+  background-color: #ffffff; /* Fundo dos inputs */
+  color: #adb5bd; /* Cor do texto */
+  border: 1px solid #007bff; /* Cor da borda */
+}
+
+.form-control::placeholder {
+  color: #adb5bd; /* Cor do placeholder */
+}
+
+/* Botão "Entrar" */
+.btn-primary {
+  background-color: #343a40;
+  border-color: #31827c;
+}
+
+.btn-primary:hover {
+  background-color: #31827c;
+  border-color: #31827c;
+}
+
+/* Corrigir fundo branco do botão Login */
+.dropdown-toggle {
+  background-color: transparent; /* Remove fundo branco */
+  color: #fff; /* Garante a cor do texto */
+  border-color: #343a40; /* Cor da borda */
+  height: 50px; /* Altura igual ao botão "New Register" */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Botão "New Register" */
+a.btn-outline-secondary {
+  height: 50px; /* Altura fixa */
+  line-height: 25px; /* Centraliza o texto verticalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Ajusta a área clicável do botão Login */
+.btn-group .dropdown {
+  display: inline-block; /* Garante que o tamanho do botão seja correto */
+  margin: 0; /* Remove margens indesejadas */
+  padding: 0; /* Remove preenchimento extra */
+  list-style: none; /* Remove o estilo de lista padrão */
+}
+
+.btn-group .dropdown-toggle {
+  width: auto; /* Ajusta o tamanho ao conteúdo */
+  display: flex; /* Garante que o tamanho seja apenas o necessário */
+  padding: 10px 15px; /* Ajuste o espaçamento interno do botão */
+  text-align: center; /* Centraliza o texto */
+}
+
+.btn-group a.btn-outline-secondary {
+  margin-left: 10px; /* Adiciona espaçamento entre os botões */
+}
+
+/* Ajuste do botão Login para cor sólida */
+.dropdown-toggle {
+  background-color: #31827c; /* Fundo sólido azul */
+  color: #fff; /* Cor do texto */
+  border-color: #31827c; /* Cor da borda */
+}
+
+/* Efeito hover para o botão Login */
+.dropdown-toggle:hover {
+  background-color: #31827c; /* Fundo azul mais escuro */
+  color: #fff; /* Garante o texto branco */
+  border-color: #31827c; /* Ajuste na cor da borda ao passar o mouse */
 }
 
 /*--------------------------------------------------------------
@@ -835,6 +944,8 @@ section,
   display: inline-block;
 }
 
+
+
 .hero h2 {
   margin: 0;
   font-size: 44px;
@@ -1071,6 +1182,28 @@ section,
   margin-bottom: 15px;
   font-weight: bold;
 }
+
+
+/* ELEMENTOS DO SEARCH 3 BARRINHAS */
+.col-md-4 input,
+.col-md-4 select {
+  width: 100%;       /* Ocupa todo o espaço da coluna */
+  height: auto;      /* Ajusta a altura conforme o conteúdo */
+  display: block;    /* Corrige possíveis problemas de alinhamento */
+  padding: 0.75rem;  /* Padding uniforme */
+}
+/* mesma altura */
+.form-control,
+.form-select {
+  min-height: 50px; /* Define altura mínima para todos os elementos */
+  max-height: 50px; /* Define altura máxima para uniformidade */
+}
+/* alinhamento */
+.col-md-2 button {
+  height: 50px; /* Mesma altura dos campos */
+  
+}
+
 /* SUBMIT */
 .submit { width:100%; float:left; }
 .submit_btn {
@@ -1081,7 +1214,7 @@ section,
   outline: none;
   background-color: #6fcffb;
   color: #fff;
-  text-shadow: 0 0 5px rgb(0, 0, 0);
+  text-shadow: 0 0 5px rgb(173, 0, 0);
   font-family: inherit;
   font-size: 25px;
   font-family:'open_sansregular';

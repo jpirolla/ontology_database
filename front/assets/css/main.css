@@ -3029,10 +3029,18 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+.section-title {
+  margin-bottom: 10px; /* Reduz o espaçamento após o título */
 }
 
+.container_form {
+  margin-top: 0; /* Remove margens superiores do formulário */
+}
+
+h3 {
+  margin-top: 10px; /* Pequeno espaçamento para o título da seção */
+}
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Append Bootstrap Template</title>
+  <title>Index - Append Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -25,10 +25,9 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Novo -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- =======================================================
   * Template Name: Append
   * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
@@ -36,51 +35,40 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
 
 <body class="new-registration-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
+      <!-- LOGO SITE -->
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
+        
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Append</h1><span>.</span>
       </a>
 
+      <!-- NAV MENU -->
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#howtouse">How to use</a></li>
+          <li><a href="index.html#statistics">Statistics</a></li>
+          <li><a href="index.html#FAQ">FAQ</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    <div class="btn-group">
+        <!-- Botão New Account -->
+        <a class="btn btn-outline-secondary" href="new-registration.html">Register new artifact</a>
+    </div>
 
     </div>
   </header>
@@ -96,90 +84,61 @@
               <section id="new-registration" class="new-registration light-background">
                 <section class="newregister section">
                   <div class="container section-title" data-aos="fade-up">
-                    <h2>New Register</h2>
+                    <h2>Artifact Registration</h2>
                     <p>Quebrar o formulário em 3 seções (pessoal, do produto e licenças).</p>
                     <p>Deixar "animado" com cada seção sendo uma bolinha preenchida</p>
                   </div>
-
+                   <div class="container_form">
+          
+          <!-- AUTHOR -->
+          <h3 class="centered-text">Author Information</h3>
+          <form class="form" action="#" method="post">
+            <div class="form_grupo">
+              <label for="name" class="form_label">Name</label>
+              <div id="author-fields-container">
+                <!-- Initial field -->
+                <div class="author-field">
+                  <input type="text" name="authorName[]" placeholder="Enter author name" required>
+                  <button type="button" onclick="addAuthorField()">+</button>
                 </div>
-              </section>
-            </section>
-          </div>
-        </div>
-        <!-- Fechando aqui para evitar centralização no formulário -->
-      </div>
-    </div>
-  </div>
-                  
-                  <div class="container_form">
-                    <h3>Personal Information</h3>
-                    <form class="form" action="#" method="post">
-                      <div class="form_grupo">
-                        <label for="name" class="form_label">Name</label>
-                        <input type="text" name="name" class="form_input" id="name" placeholder=" " required>
-                      </div>
-                      
-                      <div class="form_grupo">
-                        <label for="e-mail" class="form_label">Email</label>
-                        <input type="email" name="email" class="form_input" id="email" placeholder="yourEmail@email.com" required>
-                      </div>
-                      
-                      <!-- IDADE -->
-                      <div class="form_grupo">
-                        <label for="datanascimento" class="form_label">Data de Nascimento</label>
-                        <input type="date" name="datanascimento" class="form_input" id="datanascimento" placeholder="Data de Nascimento" required>
-                      </div>
-          
-                      <!-- ESTADO -->
-                      <div class="form_grupo">
-                        <label for="state" class="form_label">State</label>
-                        <select name="state" id="state" class="dropdown" required>
-                          <option selected disabled class="form_select_option" value="">Select your state</option>
-                          <option value="AC" class="form_select_option">Acre (AC)</option>
-                          <option value="AL" class="form_select_option">Alagoas (AL)</option>
-                          <option value="AP" class="form_select_option">Amapá (AP)</option>
-                          <option value="AM" class="form_select_option">Amazonas (AM)</option>
-                          <option value="BA" class="form_select_option">Bahia (BA)</option>
-                          <option value="CE" class="form_select_option">Ceará (CE)</option>
-                          <option value="DF" class="form_select_option">Distrito Federal (DF)</option>
-                          <option value="ES" class="form_select_option">Espírito Santo (ES)</option>
-                          <option value="GO" class="form_select_option">Goiás (GO)</option>
-                          <option value="MA" class="form_select_option">Maranhão (MA)</option>
-                          <option value="MT" class="form_select_option">Mato Grosso (MT)</option>
-                          <option value="MS" class="form_select_option">Mato Grosso do Sul (MS)</option>
-                          <option value="MG" class="form_select_option">Minas Gerais (MG)</option>
-                          <option value="PA" class="form_select_option">Pará (PA)</option>
-                          <option value="PB" class="form_select_option">Paraíba (PB)</option>
-                          <option value="PR" class="form_select_option">Paraná (PR)</option>
-                          <option value="PE" class="form_select_option">Pernambuco (PE)</option>
-                          <option value="PI" class="form_select_option">Piauí (PI)</option>
-                          <option value="RJ" class="form_select_option">Rio de Janeiro (RJ)</option>
-                          <option value="RN" class="form_select_option">Rio Grande do Norte (RN)</option>
-                          <option value="RS" class="form_select_option">Rio Grande do Sul (RS)</option>
-                          <option value="RO" class="form_select_option">Rondônia (RO)</option>
-                          <option value="RR" class="form_select_option">Roraima (RR)</option>
-                          <option value="SC" class="form_select_option">Santa Catarina (SC)</option>
-                          <option value="SP" class="form_select_option">São Paulo (SP)</option>
-                          <option value="SE" class="form_select_option">Sergipe (SE)</option>
-                          <option value="TO" class="form_select_option">Tocantins (TO)</option>
-                        </select>
-                      </div>
-                      
-          
-                      <form class="form" action="#" method="post">
-                        <div class="form_grupo">
-                          <label for="city" class="form_label">City</label>
-                          <input type="text" name="city" class="form_input" id="city" placeholder=" " required>
-                        </div>
-           
-                        
-                          <!-- PRODUCT INFO -->
-            <h3>Product Information</h3>
+              </div>
+            
+            <div class="form_grupo">
+              <label for="e-mail" class="form_label">Email</label>
+              <input type="email" name="email" class="form_input" id="email" placeholder="yourEmail@email.com" required>
+            </div>
+            
             <form class="form" action="#" method="post">
-              <!-- Product Title -->
               <div class="form_grupo">
-                <label for="product_title" class="form_label">Product Title</label>
-                <input type="text" name="product_title" class="form_input" id="product_title" placeholder=" " required>
+                <label for="institution" class="form_label">Institution</label>
+                <div id="institution-fields-container">
+                  <!-- Campo inicial com botão '+' -->
+                  <div class="institution-field">
+                    <input type="text" name="institutionName[]" placeholder="Enter institution name" required>
+                    <button type="button" onclick="addInstitutionField()">+</button>
+                  </div>
+                </div>
+              </div>
+
+            <div id="artifact-information-container">
+            <form class="form" action="#" method="post">
+              <div class="form_grupo">
+                <label for="city" class="form_label">City</label>
+                <input type="text" name="city" class="form_input" id="city" placeholder=" " required>
+              </div>
+              
+              
+                <!-- ARTIFACT INFORMATION -->
+                <h3 class="centered-text">Artifact Information</h3>
+                <div class="form_grupo">
+                  <label for="product_title" class="form_label">Product Title</label>
+                  <input type="text" name="product_title" class="form_input" id="product_title" placeholder=" " required>
+                </div>
+
+                <!-- Description -->
+              <div class="form_grupo">
+                <label for="description" class="form_label">Description</label>
+                <textarea name="description" id="description" class="form_input" rows="4" required></textarea>
               </div>
 
               <!-- Product Category -->
@@ -196,13 +155,41 @@
                   <option value="Specification" class="form_select_option">Specification</option>
                 </select>
               </div>
-
-              <!-- Description -->
-              <div class="form_grupo">
-                <label for="description" class="form_label">Description</label>
-                <textarea name="description" id="description" class="form_input" rows="4" required></textarea>
-              </div>
-
+              
+              <div class="form-group">
+                <label for="purpose_category" class="form_label">Purpose of the Work</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="educational" id="purposeEducational">
+                    <label class="form-check-label" for="purposeEducational">
+                      Educational Purpose
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="artistic" id="purposeArtistic">
+                    <label class="form-check-label" for="purposeArtistic">
+                      Artistic Purpose
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="dissemination" id="purposeDissemination">
+                    <label class="form-check-label" for="purposeDissemination">
+                      Dissemination Purpose
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="scientific" id="purposeScientific">
+                    <label class="form-check-label" for="purposeScientific">
+                      Scientific Purpose
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="commercial" id="purposeCommercial">
+                    <label class="form-check-label" for="purposeCommercial">
+                      Commercial Purpose
+                    </label>
+                  </div>
+                </div>
+                
               <!-- Keywords -->
               <div class="form_grupo">
                 <label for="keywords" class="form_label">Keywords</label>
@@ -213,13 +200,9 @@
               <div class="form_grupo">
                 <label for="creation_date" class="form_label">Creation Date</label>
                 <input type="date" name="creation_date" class="form_input" id="creation_date">
+                <p>ola</p>
               </div>
 
-              <!-- Publication Date -->
-              <div class="form_grupo">
-                <label for="publication_date" class="form_label">Publication Date</label>
-                <input type="date" name="publication_date" class="form_input" id="publication_date">
-              </div>
 
               <!-- Product Format -->
               <div class="form_grupo">
@@ -235,7 +218,7 @@
               </div>
 
               <!-- ABOUT USAGE RIGHTS -->
-              <h3>About Usage Rights</h3>
+              <h3 class="centered-text">About Usage Rights</h3>
               
               <!-- License Type -->
               <div class="form_grupo">
@@ -282,14 +265,14 @@
               </div>
                               
             
-
+            </div>
             <div class="submit">
               <input type="hidden" name="acao" value="enviar">
               <button type="submit" name="Submit" class="submit_btn">Cadastrar</button>
             </div>
           </form>
+          </div>
         </div>
-        
       </section>
     </section>
     
@@ -308,13 +291,12 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Starter Section Section -->
     <section id="registration-section" class="registration-section section">
 
       <div class="container" data-aos="fade-up">
         <p>Use this page as a starter for your own custom pages.</p>
 
-    </section><!-- /Starter Section Section -->
+    </section>
 
   </main>
 
@@ -397,9 +379,11 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
 
 </body>
 

@@ -587,6 +587,29 @@ a.btn-outline-secondary {
   border-color: #31827c; /* Ajuste na cor da borda ao passar o mouse */
 }
 
+/* Ajustar o tamanho do dropdown */
+#dropdownMenu1 {
+  width: 100%; /* Faz o botão do dropdown ocupar toda a largura disponível */
+}
+
+/* Certifique-se de que o conteúdo do dropdown é visível */
+.dropdown-menu {
+  width: 300px; /* Altere para a largura desejada */
+  min-width: 300px; /* Define uma largura mínima */
+  padding: 10px; /* Mantém o espaçamento interno */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+/* Ajuste o espaçamento entre os campos */
+.dropdown-menu .form-group {
+  margin-bottom: 5px;
+}
+
+/* Permita altura flexível nos botões */
+.dropdown-toggle,
+a.btn-outline-secondary {
+  min-height: 50px;
+  height: auto;
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -1146,6 +1169,7 @@ section,
 
 
 
+
 /*--------------------------------------------------------------
 # Form Section
 --------------------------------------------------------------*/
@@ -1203,6 +1227,115 @@ section,
   height: 50px; /* Mesma altura dos campos */
   
 }
+
+form {
+  display: block;
+  text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+.form_grupo {
+  margin-bottom: 20px; /* Espaçamento entre os grupos */
+}
+
+.form_label {
+  display: block;
+  margin-bottom: 5px; /* Espaço entre o rótulo e o campo */
+  font-weight: bold; /* (Opcional) Deixa o rótulo em negrito */
+  text-align: left; /* Garante que o texto do rótulo fique alinhado à esquerda */
+}
+
+
+.form_input, 
+.dropdown, 
+input[type="text"], 
+input[type="email"], 
+input[type="date"], 
+select {
+  width: 100%; /* Faz o campo preencher a largura disponível */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left; /* Alinha o texto do campo à esquerda */
+}
+
+
+/* Altera a cor da borda do checkbox */
+.form-check-input {
+  border: 2px solid #4CAF50; /* Cor verde */
+}
+
+/* Altera a cor da borda quando o checkbox é marcado */
+.form-check-input:checked {
+  border-color: #FF6347; /* Cor laranja quando marcado */
+}
+
+#author-fields-container .author-field {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o input e o botão */
+}
+
+/* Seção específica para Artifact Information */
+#artifact-information-container {
+  margin-top: 20px; /* Espaço acima da seção */
+}
+
+#artifact-information-container .form_grupo {
+  margin-bottom: 20px; /* Espaçamento entre os campos, como em outras seções */
+}
+
+#artifact-information-container .form_label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#artifact-information-container .form_input, 
+#artifact-information-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left;
+}
+#artifact-information-container button {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+#artifact-information-container {
+  display: flex;
+  flex-direction: column; /* Organiza os campos em coluna */
+  gap: 20px; /* Define o espaçamento entre os campos */
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+
+/* Estilo + institution */
+
+.institution-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+button:disabled {
+  opacity: 0.5; /* Opção para desabilitar o botão, se desejado */
+}
+
+
 
 /* SUBMIT */
 .submit { width:100%; float:left; }
@@ -1327,6 +1460,12 @@ section,
   margin-bottom: 15px;
   font-weight: bold;
   
+}
+
+.centered-text {
+  text-align: center;
+  font-size: 1.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-bottom: 1rem; /* Espaço inferior para separação */
 }
 
 

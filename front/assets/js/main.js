@@ -217,3 +217,81 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Função para adicionar um novo campo de autor
+function addAuthorField() {
+  const authorFieldsContainer = document.getElementById('author-fields-container');
+  
+  // Criação do novo campo de autor
+  const newAuthorField = document.createElement('div');
+  newAuthorField.classList.add('author-field');
+  
+  // Criação do novo campo de entrada para o nome do autor
+  const inputField = document.createElement('input');
+  inputField.type = 'text';
+  inputField.name = 'authorName[]';
+  inputField.placeholder = 'Enter author name';
+  inputField.required = true;
+
+  // Criação do botão '+' para adicionar mais campos
+  const addButton = document.createElement('button');
+  addButton.type = 'button';
+  addButton.innerText = '+';
+  addButton.onclick = addAuthorField;
+
+  // Se o número de campos já é maior que 1, não mostra o botão '+'
+  if (authorFieldsContainer.children.length > 0) {
+    const lastField = authorFieldsContainer.lastElementChild;
+    const lastButton = lastField.querySelector('button');
+    if (lastButton) {
+      lastButton.style.display = 'none'; // Esconde o botão '+' no campo anterior
+    }
+  }
+
+  // Adiciona os novos elementos ao novo campo de autor
+  newAuthorField.appendChild(inputField);
+  newAuthorField.appendChild(addButton);
+
+  // Adiciona o novo campo ao container
+  authorFieldsContainer.appendChild(newAuthorField);
+};
+
+// Função para adicionar um novo campo de instituição
+function addInstitutionField() {
+  const institutionFieldsContainer = document.getElementById('institution-fields-container');
+  
+  // Criação do novo campo de instituição
+  const newInstitutionField = document.createElement('div');
+  newInstitutionField.classList.add('institution-field');
+  
+  // Criação do novo campo de entrada para o nome da instituição
+  const inputField = document.createElement('input');
+  inputField.type = 'text';
+  inputField.name = 'institutionName[]';
+  inputField.placeholder = 'Enter institution name';
+  inputField.required = true;
+
+  // Criação do botão '+' para adicionar mais campos
+  const addButton = document.createElement('button');
+  addButton.type = 'button';
+  addButton.innerText = '+';
+  addButton.onclick = addInstitutionField;
+
+  // Se o número de campos já é maior que 1, não mostra o botão '+'
+  if (institutionFieldsContainer.children.length > 0) {
+    const lastField = institutionFieldsContainer.lastElementChild;
+    const lastButton = lastField.querySelector('button');
+    if (lastButton) {
+      lastButton.style.display = 'none'; // Esconde o botão '+' no campo anterior
+    }
+  }
+
+  // Adiciona os novos elementos ao novo campo de instituição
+  newInstitutionField.appendChild(inputField);
+  newInstitutionField.appendChild(addButton);
+
+  // Adiciona o novo campo ao container
+  institutionFieldsContainer.appendChild(newInstitutionField);
+
+  
+};
